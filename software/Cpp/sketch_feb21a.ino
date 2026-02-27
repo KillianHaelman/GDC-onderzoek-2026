@@ -1,5 +1,6 @@
 #include <Arduino.h>
 
+//Pi calc function
 double gregory_leibnitz(unsigned long long leib_num) {
     double calc = 0.0;
     bool pos = true;
@@ -12,7 +13,7 @@ double gregory_leibnitz(unsigned long long leib_num) {
             calc -= 1.0 / div_num;
         }
 
-        pos = !pos;        // Toggle sign
+        pos = !pos;
         div_num += 2;      // Next odd number
     }
 

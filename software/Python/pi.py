@@ -1,6 +1,7 @@
-from time import ticks_ms, ticks_diff
+from time import ticks_us, ticks_diff
 import os
 
+#Pi calc function
 def gregory_leibnitz(leib_num):
     calc = 0
     pos = True
@@ -17,9 +18,9 @@ def gregory_leibnitz(leib_num):
     return 4 * calc
 
 
-start = ticks_ms()
+start = ticks_us()
 result = gregory_leibnitz(10**8)
-end = ticks_ms()
+end = ticks_us()
 
 elapsed = ticks_diff(end, start)
 
